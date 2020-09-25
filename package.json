@@ -1,0 +1,23 @@
+{
+  "name": "roku_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farisaziz12/roku_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farisaziz12/roku_app/issues"
+  },
+  "homepage": "https://github.com/farisaziz12/roku_app#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "roku-deploy": "^3.2.3"
+  }
+}
