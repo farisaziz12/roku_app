@@ -17,7 +17,7 @@ function onKeyEvent(key, press) as boolean
     handled = false
 
     if press then
-        if key = "OK" then
+        if key = "OK" and m.login_screen.visible then
             handled = true
             onLoginButtonPressed()
         end if
