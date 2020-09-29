@@ -3,17 +3,18 @@
   <script type="text/brightscript" uri="pkg:/components/screens/login_screen.brs" />
 
   <interface>
-      <field id="login_button_pressed"
-        type="int"
-		alwaysnotify="true"
-		alias="login_button.buttonSelected" />
+      <field id="content"
+        type="node"
+        alwaysnotify="true"
+        onChange="OnContentChange" />
   </interface>
-  <children >
 
-  <Button
-    id = "login_button"
-    text = "Login"
-    translation = "[800,500]"/>
+<children >
+
+    <Keyboard 
+      id = "login_keyboard"
+      translation='[250,500]'
+     />
 
 </children>
 </component>
