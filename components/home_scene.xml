@@ -2,9 +2,13 @@
 <component name="home_scene" extends="Scene">
     <script type="text/brightscript" uri="pkg:/components/home_scene.brs" />
 <children>
+    <Button
+      id = "login_button"
+      text = "Login"
+      translation = "[800,500]"/>
     <login_screen
       id="login_screen"
-      visible="true"
+      visible="false"
       translation="[0,0]" />
 </children>
 </component>
