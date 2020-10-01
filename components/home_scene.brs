@@ -18,6 +18,8 @@ end sub
 
 sub onUsernameSubmit()
     m.login_label.text = "Enter Password"
+    username = m.login_keyboard.text
+    m.login_keyboard.text = ""
 end sub
 
 function onKeyEvent(key, press) as boolean
