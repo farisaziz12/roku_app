@@ -7,14 +7,27 @@
         type="node"
         alwaysnotify="true"
         onChange="OnContentChange" />
+        <field id="submit_button_pressed"
+		    type="int"
+		    alwaysnotify="true"
+		    alias="submit_button.buttonSelected" />
   </interface>
 
 <children >
-
+    <Label 
+      id="login_label"
+      text="Enter Username"
+      translation="[300,400]"
+    />
     <Keyboard 
       id = "login_keyboard"
       translation='[250,500]'
      />
+     <Button
+      id = "submit_button"
+      text = "Submit"
+      translation = "[1200,950]"/>
+      
 
 </children>
 </component>
