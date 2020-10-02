@@ -7,7 +7,11 @@
         type="node"
         alwaysnotify="true"
         onChange="OnContentChange" />
-        <field id="submit_button_pressed"
+        <field id="submit_username_button_pressed"
+		    type="int"
+		    alwaysnotify="true"
+		    alias="submit_username_button.buttonSelected" />
+             <field id="submit_button_pressed"
 		    type="int"
 		    alwaysnotify="true"
 		    alias="submit_button.buttonSelected" />
@@ -19,12 +23,23 @@
       text="Enter Username"
       translation="[300,400]"
     />
+    <Label
+      id='login_error'
+      text='Login Error'
+      visible='false'
+      translation='[850,300]'
+    />
     <Keyboard 
       id = "login_keyboard"
       translation='[250,500]'
      />
      <Button
       id = "submit_button"
+      text = "Submit"
+      visible = "false"
+      translation = "[1200,950]"/>
+      <Button
+      id = "submit_username_button"
       text = "Submit"
       translation = "[1200,950]"/>
       
