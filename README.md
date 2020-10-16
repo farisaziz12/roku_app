@@ -12,4 +12,4 @@ node RokuDeploy.js
 
 This will deploy the channel to roku
 
-Note: Remember to create .env file 
+Note: Remember to create .env file with the Roku IP and login info
