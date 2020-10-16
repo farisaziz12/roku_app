@@ -12,4 +12,13 @@ node RokuDeploy.js
 
 This will deploy the channel to your roku.
 
-Note: Remember to create `.env` file with the `ROKU_IP` and `ROKU_PASSWORD` variables from your device.
+Notes: 
+- Remember to create `.env` file with the `ROKU_IP` and `ROKU_PASSWORD` variables from your device.
+- For login authentication to work `Node` server needs to be running on `http://192.168.1.126:5500` with a `login.json` file.
+It needs to emit a JSON object like this:
+```bash
+{
+  "status": "verified"
+}
+
+```
