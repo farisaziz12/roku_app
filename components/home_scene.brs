@@ -1,14 +1,25 @@
 function init()
     ? "[home_scene] init"
+    ' screens
     m.login_screen = m.top.findNode("login_screen")
+    m.homepage_screen = m.top.findNode("homepage_screen")
+
+    ' buttons
     m.submit_username_button = m.top.findNode("submit_username_button")
     m.login_button = m.top.findNode("login_button")
     m.submit_button = m.top.findNode("submit_button")
+
+    ' keyboard
     m.login_keyboard = m.top.findNode("login_keyboard")
+
+    ' labels
     m.login_label = m.top.findNode("login_label")
     m.login_error = m.top.findNode("login_error")
+
+    ' observers
     m.login_screen.observeField("submit_username_button_pressed", "onUsernameSubmit")
     m.login_screen.observeField("submit_button_pressed", "onPasswordSubmit")
+
     m.login_button.setFocus(true)
 end function
 
@@ -65,6 +76,7 @@ end sub
 
 sub handleLoginSuccess()
     m.login_screen.visible = false
+    m.homepage_screen.visible = true
 end sub
 
 

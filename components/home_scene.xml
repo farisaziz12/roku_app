@@ -10,5 +10,10 @@
       id="login_screen"
       visible="false"
       translation="[0,0]" />
+
+    <homepage_screen
+      id="homepage_screen"
+      visible="false"
+      translation="[0,0]" />
 </children>
 </component>
