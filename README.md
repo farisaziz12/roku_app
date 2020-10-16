@@ -10,6 +10,6 @@ A small Roku Channel to play around with and learn Brightscript
 node RokuDeploy.js
 ```
 
-This will deploy the channel to roku
+This will deploy the channel to your roku.
 
-Note: Remember to create .env file with the Roku IP and login info
+Note: Remember to create `.env` file with the Roku IP and login info
