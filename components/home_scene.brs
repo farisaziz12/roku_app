@@ -42,10 +42,10 @@ sub checkLogin()
 end sub
 
 sub onLoginResponse(obj)
-    response = obj.getData() 'this is a string from the http response
-    'turn the string (JSON) into an Associative Array
+    response = obj.getData()
     msg = parseJSON(response)
     if msg <> invalid
+        ? msg
         if msg.status = "verified"
             handleLoginSuccess()
             if m.login_error.visible
@@ -55,8 +55,12 @@ sub onLoginResponse(obj)
             m.login_error.visible = true
         end if
     else
-        ?"error"
+        m.login_error.visible = true
     end if
+end sub
+
+sub onLoginError(obj)
+    ? "error"
 end sub
 
 sub handleLoginSuccess()
@@ -67,20 +71,32 @@ end sub
 function onKeyEvent(key, press) as boolean
     ? "[home_scene] onKeyEvent", key, press
     handled = false
-    ' if press then
+
     if key = "OK" and m.login_button.visible then
         handled = true
         onLoginButtonPressed()
+
     else if key = "down" and m.login_screen.visible then
         if m.submit_username_button.visible then
             m.submit_username_button.setFocus(true)
         else if m.submit_button.visible
             m.submit_button.setFocus(true)
         end if
+
     else if key = "up" and m.login_screen.visible then
         m.login_keyboard.setFocus(true)
+
+    else if key = "back" and m.login_screen.visible then
+        m.login_screen.visible = false
+        m.login_button.visible = true
+        m.login_button.setFocus(true)
+        m.login_label.text = "Enter Username"
+        m.login_keyboard.text = ""
+        m.submit_username_button.visible = true
+        m.submit_button.visible = false
+        return true
+
     end if
-    ' end if
 
     return handled
 end function
