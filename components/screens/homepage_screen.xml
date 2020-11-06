@@ -5,9 +5,9 @@
 <children >
 
     <label 
-      id = "homepage_label"
-      translation='[250,500]'
-      text="homepage"
+      id="homepage_label"
+      translation='[300,500]'
+      text="homepage screen"
      />
 
 </children>
