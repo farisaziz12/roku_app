@@ -66,6 +66,7 @@ end sub
 
 sub onLoginError(obj)
     if m.login_error.visible = false then
+        m.login_error.text = obj.getData()
         m.login_error.visible = true
     end if
 end sub
