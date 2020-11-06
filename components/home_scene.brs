@@ -48,7 +48,6 @@ sub checkLogin()
     m.check_login = createObject("roSGNode", "check_login_task")
     m.check_login.observeField("response", "onLoginResponse")
     m.check_login.observeField("error", "onLoginError")
-    ' m.check_login.url = url
     m.check_login.control = "RUN"
 end sub
 
@@ -56,22 +55,19 @@ sub onLoginResponse(obj)
     response = obj.getData()
     msg = parseJSON(response)
     if msg <> invalid
-        ? msg
         if msg.status = "verified"
             handleLoginSuccess()
             if m.login_error.visible
                 m.login_error.visible = false
             end if
-        else
-            m.login_error.visible = true
         end if
-    else
-        m.login_error.visible = true
     end if
 end sub
 
 sub onLoginError(obj)
-    ? "error"
+    if m.login_error.visible = false then
+        m.login_error.visible = true
+    end if
 end sub
 
 sub handleLoginSuccess()
