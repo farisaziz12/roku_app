@@ -31,8 +31,8 @@
     <Keyboard
       id = "login_keyboard"
       translation='[250,500]'
-     />
-     <Button
+    />
+    <Button
       id = "submit_button"
       text = "Submit"
       visible = "false"
@@ -41,7 +41,6 @@
       id = "submit_username_button"
       text = "Submit"
       translation = "[1200,950]"/>
-      
 
 </children>
 </component>
