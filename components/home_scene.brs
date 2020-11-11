@@ -1,5 +1,8 @@
 function init()
     ? "[home_scene] init"
+    ' setting background color
+    m.top.backgroundURI = ""
+    m.top.backgroundColor = "#0F0F0F"
     ' screens
     m.login_screen = m.top.findNode("login_screen")
     m.homepage_screen = m.top.findNode("homepage_screen")
