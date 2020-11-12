@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <component name="homepage_screen" extends="Group" >
   <script type="text/brightscript" uri="pkg:/components/screens/homepage_screen.brs" />
+  <interface>
+		<field id="feed_url" type="string" />
+	</interface>
 
 <children >
-
-    <label 
-      id="homepage_label"
-      translation='[300,500]'
-      text="homepage screen"
-     />
+    <RadioButtonList
+      id="category_list"
+      translation="[0, 100]"
+      itemSize="[420,60]"
+    >
+      <ContentNode id = "categories" role = "content" >
+        <ContentNode title = "DRAMA" feed_url="http://192.168.1.126:5500/roku_lessons/drama.json"/>
+        <ContentNode title = "COMEDY" feed_url="http://192.168.1.126:5500/roku_lessons/comedy.json"/>
+        <ContentNode title = "HORROR" feed_url="http://192.168.1.126:5500/roku_lessons/horror.json"/>
+      </ContentNode>
+    </RadioButtonList>
+    <Poster
+      id="hero_poster"
+      uri="pkg:/images/roku_img.png"
+      width="1500.0"
+      height="450.0"
+      translation="[450,0]"
+    >
+    <Label
+      id="hero_title"
+      text="Hero Title"
+      translation="[1000,50]"
+      color="#0F0F0F"
+    />
+    </Poster>
 
 </children>
 </component>
