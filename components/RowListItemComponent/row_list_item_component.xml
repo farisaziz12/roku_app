@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="RowListItemComponent" extends="Group">
+    <interface>
+        <field name="item_content" type="node" onChange="OnContentSet"/>>
+    </interface>
+    <script type="text/brightscript" uri="row_list_item_component.brs" />
+    <children>
+    </children>>
+</component>
