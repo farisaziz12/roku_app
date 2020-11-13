@@ -1,9 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<component name="RowListItemComponent" extends="Group">
-    <interface>
-        <field name="item_content" type="node" onChange="OnContentSet"/>>
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="row_list_item_component" extends="Group">
+    <!-- <interface>
+        <field name="item_content" type="node" onChange="OnContentSet"/>
     </interface>
     <script type="text/brightscript" uri="row_list_item_component.brs" />
     <children>
-    </children>>
+        <Poster
+            id="poster"
+            loadDisplayMode="scaleToFit"
+            width="320"
+            height="180"
+            loadWidth="320"
+            loadHeight="180"
+        />
+    </children> -->
 </component>
