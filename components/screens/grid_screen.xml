@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<component name="grid_screen" extends="Group" initalFocus="row_list">
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="grid_screen" extends="Group" >
     <script type="text/brightscript" uri="grid_screen.brs" />
+    <!-- initalFocus="row_list" -->
     <interface>
-        <field id="content" type="node" alias="row_list.content"/>>
+        <field id="content" type="node" />
+        <!-- alias="row_list.content" -->
     </interface>
     <children>
         <Label
@@ -17,8 +19,8 @@
             numLines="3"
             translation="[130,220]"
         />
-        <RowList
-            itemComponentName="RowListItemComponent"
+        <!-- <row_list
+            itemComponentName="row_list_item_component"
             id="row_list"
             translation="[80,350]"
             numRows="2"
@@ -29,6 +31,6 @@
             focusXOffset="[50]"
             showRowLabel="[true]"
             rowFocusAnimationStyle="floatingfocus"
-        />
-    </children>>
-</component>>
+        /> -->
+    </children>
+</component>
