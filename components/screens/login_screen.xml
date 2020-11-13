@@ -36,11 +36,13 @@
       id = "submit_button"
       text = "Submit"
       visible = "false"
-      translation = "[1200,950]"/>
-      <Button
+      translation = "[1200,950]"
+    />
+    <Button
       id = "submit_username_button"
       text = "Submit"
-      translation = "[1200,950]"/>
+      translation = "[1200,950]"
+    />
 
 </children>
 </component>
