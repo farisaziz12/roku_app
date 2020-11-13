@@ -17,19 +17,26 @@ sub setCategoryListFocus()
 end sub
 
 sub showGridScreen()
-    m.grid_screen = CreateObject("roSGNode", "GridScreen")
+    m.grid_screen = CreateObject("roSGNode", "grid_screen")
 end sub
 
 sub runContentTask()
-    m.content_task = CreateObject("roSGNode", "MainLoaderTask") ' create task for feed retrieving content
+    ? "running content task"
+    m.content_task = CreateObject("roSGNode", "main_loader_task") ' create task for feed retrieving content
     ' observer created to know when content feed will be parsed
     m.content_task.ObserveField("content", "onMainContentLoaded")
     m.content_task.control = "run" 'executing getContent method
     ' @TODO: Create loading indicator and set visible to true
 end sub
 
-sub onMainContentLoaded() 'invoked when conent is ready to be used
+sub onMainContentLoaded(obj) 'invoked when conent is ready to be used
+    ? "main content loaded"
     m.grid_screen.setFocus(true) 'set focus to grid screen
     ' @TODO: set loading indicator to false here
-    m.grid_screen.content = m.content_task.content 'populating grid screen with the retrieved content
+    response = obj.getData()
+    content = parseJSON(response)
+    if content <> invalid
+        m.grid_screen.content = content.items 'populating grid screen with the retrieved content
+        ? m.grid_screen.content
+    end if
 end sub
