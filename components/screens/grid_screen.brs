@@ -1,9 +1,9 @@
 sub init()
-    m.row_list = m.top.findNode("row_list")
-    m.row_list.setFocus(true)
-    m.description_label = m.top.findNode("description_label")
-    m.title_label = m.top.findNode("titleLabel")
-    m.row_list.observeField("rowItemFocused", "OnItemFocused")
+    ' m.row_list = m.top.findNode("row_list")
+    ' m.row_list.setFocus(true)
+    ' m.description_label = m.top.findNode("description_label")
+    ' m.title_label = m.top.findNode("titleLabel")
+    ' m.row_list.observeField("rowItemFocused", "OnItemFocused")
 end sub
 
 sub OnItemFocused()
