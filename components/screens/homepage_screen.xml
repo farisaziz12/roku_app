@@ -2,8 +2,11 @@
 <component name="homepage_screen" extends="Group" >
   <script type="text/brightscript" uri="pkg:/components/screens/homepage_screen.brs" />
   <interface>
-		<field id="feed_url" type="string" />
-	</interface>
+    <field id="category_selected"
+          type="assocarray"
+          alias="category_list.itemSelected"
+        />
+  </interface>
 
 <children >
     <RadioButtonList
@@ -17,20 +20,11 @@
         <ContentNode title = "HORROR" feed_url="http://192.168.1.126:5500/roku_lessons/horror.json"/>
       </ContentNode>
     </RadioButtonList>
-    <Poster
-      id="hero_poster"
-      uri="pkg:/images/roku_img.png"
-      width="1500.0"
-      height="450.0"
-      translation="[450,0]"
-    >
-    <Label
-      id="hero_title"
-      text="Hero Title"
-      translation="[1000,50]"
-      color="#0F0F0F"
-    />
-    </Poster>
 
+    <grid_screen
+      id="grid_screen"
+      visible="true"
+      translation="[0,0]"
+    />
 </children>
 </component>
